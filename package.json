@@ -1,0 +1,29 @@
+{
+  "name": "lodown-aeginidae",
+  "version": "1.0.0",
+  "description": "opspark lodown lib",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "istanbul cover _mocha -- test/ -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aeginidae/lodown.git"
+  },
+  "author": "Alexa Welch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aeginidae/lodown/issues"
+  },
+  "homepage": "https://github.com/aeginidae/lodown#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "i": "^0.3.6",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0",
+    "sinon": "^7.1.1"
+  }
+}
