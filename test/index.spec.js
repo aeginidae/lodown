@@ -207,12 +207,16 @@ describe('lodown', function() {
             expect(test.callCount).to.equal(5);
         });
     });
-    // TODO tests for lodown.reduce
-    // describe('reduce', function() {
-    //     it('should set seed to array[0] if seed is undefined', function() {
-    //        
-    //     });
-    // });
+    describe('reduce', function() {
+        it('should return a value that is the cumulative result of a function called on each element of an array and the previous result, or a seed', function() {
+            let array = ['hello', 'world', ',', 'lovely', 'day', 'today'];
+            expect(lodown.reduce(array, (p, n) => p + ' ' + n, 'well')).to.equal('well hello world , lovely day today');
+        });
+        it('should set seed to array[0] if seed is undefined', function() {
+            let array = [2, 4, 6, 8];
+            expect(lodown.reduce(array, (p, n) => p + n)).to.equal(20);
+        });
+    });
     describe('extend', function() {
         it('should copy every property of each object after the first to the first', function() {
             let

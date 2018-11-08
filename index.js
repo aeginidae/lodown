@@ -337,6 +337,8 @@ const reduce = (array, func, seed) => {
         if (seed === undefined) {
             seed = array[0];
             return;
+        } else if(result === undefined) {
+            result = func(seed, element, index);
         } else {
             result = func(result, element, index);
         }
